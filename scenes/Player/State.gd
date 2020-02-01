@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 class_name State
 # Define player states
-enum STATES { CLIMB, PLATFORM };
+enum STATES { CLIMB, PLATFORM, ACTION, PUSH };
 
 # define physics
 const NORMAL_FLOOR: Vector2 = Vector2(0, -1)
@@ -12,6 +12,7 @@ var state = STATES.CLIMB
 
 # Player processing
 func _physics_process(delta):
+	
 	if state == STATES.CLIMB:
 		velocity = $State/ClimbState.climb_movement();
 		$State/ClimbState.play_animation();

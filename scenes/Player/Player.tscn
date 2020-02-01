@@ -48,7 +48,7 @@ animations = [ {
 extents = Vector2( 31.0012, 48.1576 )
 
 [node name="Player" type="KinematicBody2D"]
-collision_mask = 0
+collision_mask = 17
 script = ExtResource( 2 )
 
 [node name="Animation" type="AnimatedSprite" parent="."]
@@ -60,9 +60,8 @@ shape = SubResource( 2 )
 
 [node name="Area" type="Area2D" parent="."]
 input_pickable = false
-monitorable = false
-collision_layer = 4
-collision_mask = 4
+collision_layer = 20
+collision_mask = 20
 
 [node name="AreaCollision" type="CollisionShape2D" parent="Area"]
 shape = SubResource( 2 )

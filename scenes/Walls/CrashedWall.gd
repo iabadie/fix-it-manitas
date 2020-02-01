@@ -18,12 +18,6 @@ func _ready():
 
 func _process(delta):
 	$LifeBar.value = wall_life;
-	# TODO - inputs added for debuggin
-	if Input.is_action_just_pressed("a"):
-		crash_wall()
-	if Input.is_action_just_pressed("s"):
-		fix_wall()
-	## END TODO
 
 # Wall life methods
 func fix_wall(amount: int = 10):

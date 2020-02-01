@@ -2,42 +2,44 @@
 
 [ext_resource path="res://scenes/Walls/CrashedWall.gd" type="Script" id=2]
 
-[sub_resource type="StreamTexture" id=4]
+[sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 60, 60 )
-
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.0705882, 0.505882, 0.219608, 1 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.654902, 0.215686, 0.215686, 1 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 61.6322, 62.8203 )
 
 [node name="CrashedWall" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Image" type="Sprite" parent="."]
 scale = Vector2( 1.875, 1.875 )
-texture = SubResource( 4 )
+texture = SubResource( 1 )
 centered = false
-
-[node name="Area" type="Area2D" parent="."]
-
-[node name="Collision" type="CollisionShape2D" parent="Area"]
-position = Vector2( 60, 60 )
-shape = SubResource( 1 )
 
 [node name="LifeBar" type="ProgressBar" parent="."]
 margin_left = -30.0
 margin_top = -75.0
 margin_right = 150.0
 margin_bottom = -60.0
-custom_styles/fg = SubResource( 2 )
-custom_styles/bg = SubResource( 3 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
 value = 50.0
 percent_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="WallArea" type="Area2D" parent="."]
+collision_layer = 17
+collision_mask = 17
+
+[node name="WallShape" type="CollisionShape2D" parent="WallArea"]
+position = Vector2( 59.4838, 59.3175 )
+shape = SubResource( 5 )
