@@ -1,14 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Walls/CrashedWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Platform/Platform.tscn" type="PackedScene" id=3]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 63.038, 540 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 870.594, 91.4655 )
+[ext_resource path="res://scenes/Limits/Limits.tscn" type="PackedScene" id=4]
 
 [node name="Level" type="Node2D"]
 
@@ -38,35 +33,4 @@ position = Vector2( 240, 720 )
 [node name="Platform" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1320, 600 )
 
-[node name="Limits" type="Node2D" parent="."]
-
-[node name="ColLeftBody" type="StaticBody2D" parent="Limits"]
-collision_layer = 8
-
-[node name="ColLeftShape" type="CollisionShape2D" parent="Limits/ColLeftBody"]
-position = Vector2( 63.9384, 538.34 )
-shape = SubResource( 1 )
-
-[node name="ColRightBody" type="StaticBody2D" parent="Limits"]
-position = Vector2( 1795, 0 )
-collision_layer = 8
-
-[node name="ColRightShape" type="CollisionShape2D" parent="Limits/ColRightBody"]
-position = Vector2( 63.9384, 538.34 )
-shape = SubResource( 1 )
-
-[node name="ColTopBody" type="StaticBody2D" parent="Limits"]
-position = Vector2( 1795, 0 )
-collision_layer = 8
-
-[node name="ColTopShape" type="CollisionShape2D" parent="Limits/ColTopBody"]
-position = Vector2( -835.891, 91.8766 )
-shape = SubResource( 2 )
-
-[node name="ColBotBody" type="StaticBody2D" parent="Limits"]
-position = Vector2( 1795, 896.242 )
-collision_layer = 8
-
-[node name="ColBotShape" type="CollisionShape2D" parent="Limits/ColBotBody"]
-position = Vector2( -830.855, 91.8766 )
-shape = SubResource( 2 )
+[node name="Limits" parent="." instance=ExtResource( 4 )]

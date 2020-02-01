@@ -32,6 +32,8 @@ func platform_movement():
 		velocity.x = -MOVE_VELOCITY;
 	if Input.is_action_just_released("ui_left") || Input.is_action_just_released("ui_right"):
 		velocity.x = NO_VELOCITY;
+	if Input.is_action_pressed("ui_up"):
+		velocity.y = -GRAVITY_FORCE - MOVE_VELOCITY
 	pass
 	
 func climb_movement():
