@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Walls/CrashedWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Platform/Platform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Limits/Limits.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Fondo.png" type="Texture" id=5]
 
 [node name="Level" type="Node2D"]
 __meta__ = {
@@ -11,23 +12,9 @@ __meta__ = {
 "_edit_vertical_guides_": [ 1000.83, 520.321, 1420.31 ]
 }
 
-[node name="Background" type="ColorRect" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
-color = Color( 0.494118, 0.180392, 0.180392, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 120.0
-margin_top = 180.0
-margin_right = 1800.0
-margin_bottom = 900.0
-color = Color( 0.101961, 0.105882, 0.52549, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+centered = false
 
 [node name="WallCrashes" type="Node2D" parent="."]
 
@@ -97,19 +84,8 @@ scale = Vector2( 0.5, 0.5 )
 position = Vector2( 913.059, 772.108 )
 scale = Vector2( 0.75, 0.75 )
 
-[node name="PlatCrash7" type="Node2D" parent="WallCrashes"]
-position = Vector2( 428.564, 11.6882 )
-
-[node name="CrashedWall2" parent="WallCrashes/PlatCrash7" instance=ExtResource( 1 )]
-position = Vector2( 1010.72, 691.849 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Platform" parent="WallCrashes/PlatCrash7" instance=ExtResource( 3 )]
-position = Vector2( 608.715, 789.376 )
-scale = Vector2( 0.75, 0.75 )
-
 [node name="PlatCrash8" type="Node2D" parent="WallCrashes"]
-position = Vector2( 212.334, -290.255 )
+position = Vector2( -1.35442, -26.9218 )
 
 [node name="CrashedWall2" parent="WallCrashes/PlatCrash8" instance=ExtResource( 1 )]
 position = Vector2( 1010.72, 691.849 )
@@ -127,17 +103,6 @@ position = Vector2( 930.847, 682.109 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash9" instance=ExtResource( 3 )]
-position = Vector2( 913.059, 772.108 )
-scale = Vector2( 0.75, 0.75 )
-
-[node name="PlatCrash10" type="Node2D" parent="WallCrashes"]
-position = Vector2( -233.762, -301.943 )
-
-[node name="CrashedWall2" parent="WallCrashes/PlatCrash10" instance=ExtResource( 1 )]
-position = Vector2( 1010.72, 691.849 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Platform" parent="WallCrashes/PlatCrash10" instance=ExtResource( 3 )]
 position = Vector2( 913.059, 772.108 )
 scale = Vector2( 0.75, 0.75 )
 

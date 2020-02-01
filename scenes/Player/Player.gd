@@ -12,7 +12,7 @@ func _process(delta):
 			areaprueba.get_parent().fix_wall();
 	elif player_number == "player2":
 		if can_repair && areaprueba != null && Input.is_action_just_pressed("Action_2"):
-			areaprueba.get_parent().fix_wall();
+			areaprueba.get_parent().crash_wall();
 	
 # Player signals conection
 func _on_Area_area_entered(area):
