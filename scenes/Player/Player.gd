@@ -5,7 +5,7 @@ enum STATES { CLIMB, PLATFORM };
 
 # Define Player constant values
 const CLIMB_VELOCITY: int = 200;
-const MOVE_VELOCITY: int = 100;
+const MOVE_VELOCITY: int = 300;
 const NO_VELOCITY: int = 0;
 const GRAVITY_FORCE: int = 10;
 const NORMAL_FLOOR: Vector2 = Vector2(0, -1)
