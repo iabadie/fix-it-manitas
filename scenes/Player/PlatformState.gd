@@ -2,7 +2,7 @@ extends Node
 class_name PlatformState
 
 # Define Player constant values
-const MOVE_VELOCITY: int = 100;
+const MOVE_VELOCITY: int = 300;
 const NO_VELOCITY: int = 0;
 const GRAVITY_FORCE: int = 10;
 

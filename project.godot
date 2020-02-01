@@ -27,7 +27,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "State",
 "language": "GDScript",
-"path": "res://State.gd"
+"path": "res://scenes/Player/State.gd"
 } ]
 _global_script_class_icons={
 "ClimbState": "",
