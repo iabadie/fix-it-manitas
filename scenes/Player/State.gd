@@ -14,8 +14,10 @@ var state = STATES.CLIMB
 func _physics_process(delta):
 	if state == STATES.CLIMB:
 		velocity = $State/ClimbState.climb_movement();
+		$State/ClimbState.play_animation();
 	else:
 		velocity = $State/PlatformState.platform_movement(is_on_floor());
+		$State/PlatformState.play_animation();
 	move_and_slide(velocity, NORMAL_FLOOR);
 
 func change_state(new_state: int):

@@ -7,6 +7,7 @@ const NO_VELOCITY: int = 0;
 const GRAVITY_FORCE: int = 10;
 
 var velocity: Vector2 = Vector2();
+var is_idle: bool = true;
 
 # Player movement function
 func platform_movement(is_on_floor: bool):
@@ -14,8 +15,10 @@ func platform_movement(is_on_floor: bool):
 		velocity.y += GRAVITY_FORCE;
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = MOVE_VELOCITY;
+		$"../../Animation".flip_h = false;
 	if Input.is_action_pressed("ui_left"):
 		velocity.x = -MOVE_VELOCITY;
+		$"../../Animation".flip_h = true;
 	if Input.is_action_just_released("ui_left") || Input.is_action_just_released("ui_right"):
 		velocity.x = NO_VELOCITY;
 	if Input.is_action_pressed("ui_up"):
@@ -24,7 +27,20 @@ func platform_movement(is_on_floor: bool):
 		velocity.x = NO_VELOCITY;
 	if Input.is_action_just_released("ui_up") || Input.is_action_just_released("ui_down"):
 		velocity.y = NO_VELOCITY;
+		
+	if velocity.y >= 0 && velocity.x == 0:
+		is_idle = true;
+	else:
+		is_idle = false;
+		
 	return velocity;
 
 func clear_velocity():
 	velocity = Vector2();
+	
+func play_animation():
+	if is_idle:
+		$"../../Animation".play("IDLE");
+	else:
+		$"../../Animation".play("Walk");
+

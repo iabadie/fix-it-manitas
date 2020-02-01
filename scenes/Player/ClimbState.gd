@@ -25,3 +25,15 @@ func climb_movement():
 
 func clear_velocity():
 	velocity = Vector2();
+
+#if velocity.y == 0 && velocity.x == 0:
+#	$"../../Animation".stop("Climb");
+	
+#func play_animation():
+#	$"../../Animation".play("Climb");
+
+func play_animation():
+	if velocity.y == 0 && velocity.x == 0:
+		$"../../Animation".stop();
+	else:
+		$"../../Animation".play("Climb");

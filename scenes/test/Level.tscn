@@ -29,14 +29,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 240, 720 )
-
-[node name="Player2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1712.76, 787.973 )
-
-[node name="Limits" parent="." instance=ExtResource( 4 )]
-
 [node name="WallCrashes" type="Node2D" parent="."]
 
 [node name="PlatCrash" type="Node2D" parent="WallCrashes"]
@@ -188,3 +180,13 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Platform" parent="WallCrashes/PlatCrash10" instance=ExtResource( 3 )]
 position = Vector2( 913.059, 772.108 )
 scale = Vector2( 0.75, 0.75 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 240, 720 )
+z_index = 1
+
+[node name="Player2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1712.76, 787.973 )
+z_index = 1
+
+[node name="Limits" parent="." instance=ExtResource( 4 )]
