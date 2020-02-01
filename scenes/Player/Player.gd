@@ -15,7 +15,7 @@ var velocity: Vector2 = Vector2();
 var state: int = STATES.CLIMB;
 
 # Player processing
-func _physics_process(delta)(:
+func _physics_process(delta):
 	if state == STATES.CLIMB:
 		climb_movement();
 	else:
