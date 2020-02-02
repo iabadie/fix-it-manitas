@@ -31,6 +31,7 @@ func set_player():
 		$PlayerReady/AnimatedSprite.play("p1")
 		$Animation.play("p1");
 	else:
+		randomize();
 		var number = randi() % 2 + 2
 		$PlayerReady/AnimatedSprite.play("p" + str(number));
 		Global.set_player_2(number);

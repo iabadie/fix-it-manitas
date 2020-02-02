@@ -15,6 +15,7 @@ func _process(delta):
 		$Animation.play("go_to_level");
 		
 	if Input.is_action_just_pressed("ui_x"):
+		Global.clear_ready();
 		get_tree().change_scene("res://scenes/Menu/Credits.tscn")
 	if Input.is_action_just_pressed("ui_select"):
 		get_tree().quit()
