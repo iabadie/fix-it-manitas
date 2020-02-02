@@ -1,8 +1,8 @@
 extends CanvasLayer
 
 var initialTime: int = 3
-var time = 5;
-var final = "nul"
+var time = 45;
+var final = ""
 
 func _ready():
 	$InitialTime.start()
