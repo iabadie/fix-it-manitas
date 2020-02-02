@@ -1,10 +1,12 @@
-extends State
+extends "./State.gd"
 
 const NO_VELOCITY: int = 0;
 var can_repair: bool = false;
 var areaprueba: Area2D = null;
 
 func _process(delta):
+	if $Animation.animation == "Action" && $Animation.frame == 2:
+		change_state(STATES.PLATFORM);
 	if player_number == "player1":
 		if can_repair && areaprueba != null && Input.is_action_just_pressed("Action_1"):
 			areaprueba.get_parent().fix_wall();
