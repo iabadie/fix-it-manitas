@@ -1,7 +1,8 @@
 extends CanvasLayer
 
 var initialTime: int = 3
-var time = 60;
+var time = 5;
+var final = "nul"
 
 func _ready():
 	$InitialTime.start()
@@ -32,7 +33,15 @@ func _on_Timer_timeout():
 	time -= 1;
 	if time == 0:
 		get_tree().call_group("game", "finish")
-	else:
+		if Global.p1_score > Global.p2_score:
+			final = "P1 WINS!";
+		if Global.p1_score < Global.p2_score:
+			final = "P2 WINS!";
+		else:
+			final = "DRAW!";
+		$Win.visible = true;
+		$Win.text = final;
+	if time > 0:
 		$Timer.start()
 	
 	pass

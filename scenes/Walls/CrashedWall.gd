@@ -22,11 +22,19 @@ func _process(delta):
 
 # Wall life methods
 func fix_wall(amount: int = 10):
+	if wall_life == 190:
+		Global.p1_score += 1
+	if wall_life == 0:
+		Global.p2_score -= 1
 	if wall_life < MAX_WALL_LIFE:
 		wall_life += amount
 	wall_sprite();
 
 func crash_wall(amount: int = 10):
+	if wall_life == 200:
+		Global.p1_score -= 1
+	if wall_life == 10:
+		Global.p2_score += 1
 	if wall_life > NO_LIFE:
 		wall_life -= amount
 	wall_sprite();

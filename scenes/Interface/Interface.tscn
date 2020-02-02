@@ -14,6 +14,7 @@ extra_spacing_space = 1
 font_data = ExtResource( 3 )
 
 [node name="Interface" type="CanvasLayer"]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="P1" type="Label" parent="."]
@@ -50,6 +51,18 @@ __meta__ = {
 }
 
 [node name="ReadyTime" type="Label" parent="."]
+margin_left = 697.776
+margin_top = 412.683
+margin_right = 1302.78
+margin_bottom = 743.683
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win" type="Label" parent="."]
 margin_left = 697.776
 margin_top = 412.683
 margin_right = 1302.78
