@@ -18,24 +18,25 @@ func _ready():
 
 func _process(delta):
 	$LifeBar.value = wall_life;
-	wall_sprite();
+	#wall_sprite();
 
 # Wall life methods
 func fix_wall(amount: int = 10):
 	if wall_life < MAX_WALL_LIFE:
 		wall_life += amount
-	#wall_sprite();
+	wall_sprite();
 
 func crash_wall(amount: int = 10):
 	if wall_life > NO_LIFE:
 		wall_life -= amount
-	#wall_sprite();
+	wall_sprite();
 
 func wall_sprite():
 	if wall_life ==0:
 		$cristal01.visible = true;
 		$cristal02.visible = false;
 		$cristal03.visible = false;
+		$fx_roto.play();
 	if wall_life >0 && wall_life < 100:
 		$cristal01.visible = false;
 		$cristal02.visible = true;
@@ -48,4 +49,5 @@ func wall_sprite():
 		$cristal01.visible = false;
 		$cristal02.visible = false;
 		$cristal03.visible = false;
+		$fx_reparado.play();
 	
