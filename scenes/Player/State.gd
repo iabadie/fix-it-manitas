@@ -13,6 +13,8 @@ var state = STATES.CLIMB
 
 # Player processing
 func _physics_process(delta):
+	if is_on_floor() && state != STATES.ACTION:
+		change_state(STATES.PLATFORM);
 	
 	if state == STATES.CLIMB:
 		velocity = $State/ClimbState.climb_movement(player_number);
@@ -24,9 +26,6 @@ func _physics_process(delta):
 		velocity = $State/PlatformState.platform_movement(is_on_floor(), player_number);
 		$State/PlatformState.play_animation();
 	move_and_slide(velocity, NORMAL_FLOOR);
-	
-	if is_on_floor() && state != STATES.ACTION:
-		change_state(STATES.PLATFORM);
 
 func change_state(new_state: int):
 	state = new_state;
