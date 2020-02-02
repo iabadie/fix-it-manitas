@@ -23,3 +23,4 @@ func selection_ready():
 	$ButtonLabel.visible = false;
 	$PlayerReady.visible = true;
 	$PlayerReady/ReadyText.text = "P" + str(player_number) + " READY!";
+	$PlayerReady/AnimatedSprite.play("selected")
