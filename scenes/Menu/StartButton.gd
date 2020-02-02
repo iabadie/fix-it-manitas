@@ -19,8 +19,18 @@ func selection_ready():
 	Global.player_ready();
 	can_select = false;
 	$Animation.stop();
+	set_player()
 	$Animation.play("selected");
 	$ButtonLabel.visible = false;
 	$PlayerReady.visible = true;
 	$PlayerReady/ReadyText.text = "P" + str(player_number) + " READY!";
-	$PlayerReady/AnimatedSprite.play("selected")
+
+
+func set_player():
+	if player_number == 1:
+		$PlayerReady/AnimatedSprite.play("p1")
+		$Animation.play("p1");
+	else:
+		var number = randi() % 2 + 2
+		$PlayerReady/AnimatedSprite.play("p" + str(number));
+		Global.set_player_2(number);

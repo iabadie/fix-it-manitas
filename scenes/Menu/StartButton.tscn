@@ -1,31 +1,45 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/Menu/StartButton.gd" type="Script" id=1]
 [ext_resource path="res://Assets/IDLE/player1/Idlenacho03.png" type="Texture" id=2]
 [ext_resource path="res://Assets/OpenSans-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/IDLE/player1/Idlenacho02.png" type="Texture" id=4]
 [ext_resource path="res://Assets/IDLE/player1/Idlenacho01.png" type="Texture" id=5]
+[ext_resource path="res://Assets/IDLE/player3/idle02.png" type="Texture" id=6]
+[ext_resource path="res://Assets/IDLE/player3/idle01.png" type="Texture" id=7]
+[ext_resource path="res://Assets/IDLE/player2/idle01.png" type="Texture" id=8]
+[ext_resource path="res://Assets/IDLE/player2/idle02.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
 use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ) ],
 "loop": true,
-"name": "selected",
+"name": "p1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "p2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "p3",
 "speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 50
 use_filter = true
 extra_spacing_space = 5
 font_data = ExtResource( 3 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("ButtonLabel:modulate")
@@ -40,7 +54,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.243137 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 0.5
 step = 0.05
 tracks/0/type = "value"
@@ -82,8 +96,8 @@ __meta__ = {
 modulate = Color( 1, 1, 1, 0.815686 )
 position = Vector2( 0, -125.196 )
 scale = Vector2( 0.388692, 0.388692 )
-frames = SubResource( 5 )
-animation = "selected"
+frames = SubResource( 2 )
+animation = "p3"
 
 [node name="ButtonLabel" type="Label" parent="."]
 anchor_right = 1.0
@@ -92,7 +106,7 @@ margin_left = -178.678
 margin_top = -33.0432
 margin_right = 180.322
 margin_bottom = 35.9568
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 10
 text = "TEXTO PRUEBA"
@@ -103,5 +117,5 @@ __meta__ = {
 }
 
 [node name="Animation" type="AnimationPlayer" parent="."]
-anims/binding_label = SubResource( 3 )
-anims/selected = SubResource( 4 )
+anims/binding_label = SubResource( 4 )
+anims/selected = SubResource( 5 )
