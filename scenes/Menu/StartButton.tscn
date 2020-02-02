@@ -4,12 +4,12 @@
 [ext_resource path="res://Assets/icon.png" type="Texture" id=2]
 [ext_resource path="res://Assets/OpenSans-Regular.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=5]
 size = 50
 use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=6]
 size = 50
 use_filter = true
 extra_spacing_space = 5
@@ -56,7 +56,7 @@ margin_left = -101.527
 margin_top = 36.2569
 margin_right = 94.4726
 margin_bottom = 105.257
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.984314, 0.984314, 0.984314, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_y = 1
@@ -90,7 +90,7 @@ margin_left = -178.678
 margin_top = -33.0432
 margin_right = 180.322
 margin_bottom = 35.9568
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 10
 text = "TEXTO PRUEBA"

@@ -12,6 +12,11 @@ func _process(delta):
 	if listening_start && !playing_animation && (Input.is_action_just_pressed("Action_1") || Input.is_action_just_pressed("Action_2")):
 		playing_animation = true;
 		Animation.play("go_to_level");
+		
+	if Input.is_action_just_pressed("ui_x"):
+		get_tree().change_scene("res://scenes/Menu/Credits.tscn")
+	if Input.is_action_just_pressed("ui_select"):
+		get_tree().quit()
 
 func _on_Animation_animation_finished(anim_name):
 	if anim_name == "go_to_level":
