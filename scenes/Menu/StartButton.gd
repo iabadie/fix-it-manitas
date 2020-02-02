@@ -12,15 +12,14 @@ func _ready():
 	pass
 	
 func _process(delta):
-	if can_select && Input.is_action_just_pressed("Action_"+str(player_number)):
+	if  can_select && Input.is_action_just_pressed("Action_"+str(player_number)):
 		selection_ready();
 
 func selection_ready():
+	Global.player_ready();
+	can_select = false;
 	$Animation.stop();
 	$Animation.play("selected");
 	$ButtonLabel.visible = false;
 	$PlayerReady.visible = true;
 	$PlayerReady/ReadyText.text = "P" + str(player_number) + " READY!";
-
-func set_font():
-	$ButtonLabel

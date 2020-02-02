@@ -42,6 +42,10 @@ config/name="fix_it_manitas"
 run/main_scene="res://scenes/test/Level.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://scripts/global.gd"
+
 [display]
 
 window/size/width=1920
