@@ -41,21 +41,20 @@ shape = SubResource( 3 )
 
 [node name="cristal01" type="Sprite" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0.490196 )
+modulate = Color( 1, 1, 1, 0.784314 )
 scale = Vector2( 1.28, 1.28 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="cristal02" type="Sprite" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0.490196 )
+modulate = Color( 1, 1, 1, 0.784314 )
 scale = Vector2( 1.28, 1.28 )
 texture = ExtResource( 3 )
 centered = false
 
 [node name="cristal03" type="Sprite" parent="."]
-visible = false
-modulate = Color( 1, 1, 1, 0.490196 )
+modulate = Color( 1, 1, 1, 0.784314 )
 scale = Vector2( 1.28, 1.28 )
 texture = ExtResource( 4 )
 centered = false
