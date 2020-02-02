@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Climb3.png-d8bf69ae829e7d64e942deeac0f936ee.stex"
+path="res://.import/idle01.png-fe647588e3493ef1ca9b2b14018f01b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Climb/Climb3.png"
-dest_files=[ "res://.import/Climb3.png-d8bf69ae829e7d64e942deeac0f936ee.stex" ]
+source_file="res://Assets/IDLE/player3/idle01.png"
+dest_files=[ "res://.import/idle01.png-fe647588e3493ef1ca9b2b14018f01b5.stex" ]
 
 [params]
 

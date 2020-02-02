@@ -1,5 +1,7 @@
 extends State
 
+class_name Player
+
 const NO_VELOCITY: int = 0;
 var can_repair: bool = false;
 var areaprueba: Area2D = null;

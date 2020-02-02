@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+class_name State
 # Define player states
 enum STATES { CLIMB, PLATFORM, ACTION, PUSH };
 

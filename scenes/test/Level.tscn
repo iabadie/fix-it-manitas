@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Walls/CrashedWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Platform/Platform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Limits/Limits.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Fondo.png" type="Texture" id=5]
+[ext_resource path="res://scenes/Player2/Player.tscn" type="PackedScene" id=6]
 
 [node name="Level" type="Node2D"]
 __meta__ = {
@@ -26,7 +27,7 @@ position = Vector2( 938.78, 653.549 )
 scale = Vector2( 0.66, 0.66 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash" instance=ExtResource( 3 )]
-position = Vector2( 918.819, 740.201 )
+position = Vector2( 921.54, 740.201 )
 scale = Vector2( 0.51, 0.350001 )
 
 [node name="PlatCrash2" type="Node2D" parent="WallCrashes"]
@@ -48,8 +49,8 @@ position = Vector2( 1234.44, 688.676 )
 scale = Vector2( 0.58, 0.58 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash3" instance=ExtResource( 3 )]
-position = Vector2( 1224.05, 766.935 )
-scale = Vector2( 0.389999, 0.350001 )
+position = Vector2( 1214.05, 765.935 )
+scale = Vector2( 0.469999, 0.350001 )
 
 [node name="PlatCrash4" type="Node2D" parent="WallCrashes"]
 position = Vector2( 539.876, -200.594 )
@@ -59,7 +60,7 @@ position = Vector2( 579.145, 472.888 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash4" instance=ExtResource( 3 )]
-position = Vector2( 552.884, 546.8 )
+position = Vector2( 554.884, 546.8 )
 scale = Vector2( 0.470002, 0.350002 )
 
 [node name="PlatCrash5" type="Node2D" parent="WallCrashes"]
@@ -88,7 +89,7 @@ position = Vector2( 1005.96, 536.355 )
 scale = Vector2( 0.62, 0.62 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash8" instance=ExtResource( 3 )]
-position = Vector2( 991.393, 617.201 )
+position = Vector2( 996.834, 617.201 )
 scale = Vector2( 0.430002, 0.430002 )
 
 [node name="PlatCrash9" type="Node2D" parent="WallCrashes"]
@@ -98,14 +99,14 @@ position = Vector2( 56.0792, 667.515 )
 position = Vector2( 723.995, 181.638 )
 scale = Vector2( 1.18, 1.18 )
 
-[node name="Player1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 76.755, 861.766 )
-z_index = 1
-player_number = "player2"
-
 [node name="Player2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1844.5, 862.436 )
 z_index = 1
 player_number = "player1"
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 145.03, 894.628 )
+z_index = 1
+player_number = "player2"
 
 [node name="Limits" parent="." instance=ExtResource( 4 )]

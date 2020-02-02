@@ -12,27 +12,27 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "ActionState",
 "language": "GDScript",
-"path": "res://scenes/Player/ActionState.gd"
+"path": "res://scenes/Player2/ActionState.gd"
 }, {
 "base": "Node",
 "class": "ClimbState",
 "language": "GDScript",
-"path": "res://scenes/Player/ClimbState.gd"
+"path": "res://scenes/Player3/ClimbState.gd"
 }, {
 "base": "Node",
 "class": "PlatformState",
 "language": "GDScript",
-"path": "res://scenes/Player/PlatformState.gd"
+"path": "res://scenes/Player3/PlatformState.gd"
 }, {
 "base": "State",
 "class": "Player",
 "language": "GDScript",
-"path": "res://scenes/Player/Player.gd"
+"path": "res://scenes/Player3/Player.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "State",
 "language": "GDScript",
-"path": "res://scenes/Player/State.gd"
+"path": "res://scenes/Player3/State.gd"
 } ]
 _global_script_class_icons={
 "ActionState": "",
@@ -45,7 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="fix_it_manitas"
-run/main_scene="res://scenes/test/Level.tscn"
+run/main_scene="res://scenes/Menu/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

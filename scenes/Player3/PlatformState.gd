@@ -1,4 +1,5 @@
 extends Node
+class_name PlatformState
 
 # Define Player constant values
 const MOVE_VELOCITY: int = 300;

@@ -1,4 +1,5 @@
 extends Node
+class_name ClimbState
 
 # Define Player constant values
 const CLIMB_VELOCITY: int = 200;

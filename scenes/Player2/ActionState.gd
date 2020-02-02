@@ -1,4 +1,5 @@
 extends Node
+class_name ActionState
 
 func play_animation():
 	if Input.is_action_just_pressed("Action_1"):
