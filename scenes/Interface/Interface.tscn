@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/ButtonsFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/Interface/Interface.gd" type="Script" id=2]
+[ext_resource path="res://Assets/OpenSans-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 9
+outline_color = Color( 0, 0, 0, 0.6 )
+use_filter = true
+extra_spacing_char = 10
+extra_spacing_space = 1
+font_data = ExtResource( 3 )
+
+[node name="Interface" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="P1" type="Label" parent="."]
+margin_left = 115.668
+margin_top = 53.4289
+margin_right = 333.668
+margin_bottom = 108.429
+custom_fonts/font = ExtResource( 1 )
+text = "Player1:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P2" type="Label" parent="."]
+margin_left = 1536.75
+margin_top = 53.4289
+margin_right = 1754.75
+margin_bottom = 108.429
+custom_fonts/font = ExtResource( 1 )
+text = "Player2:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="."]
+margin_left = 977.604
+margin_top = 53.4289
+margin_right = 1033.6
+margin_bottom = 108.429
+custom_fonts/font = ExtResource( 1 )
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReadyTime" type="Label" parent="."]
+margin_left = 697.776
+margin_top = 412.683
+margin_right = 1302.78
+margin_bottom = 743.683
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="InitialTime" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="InitialTime" to="." method="_on_InitialTime_timeout"]
