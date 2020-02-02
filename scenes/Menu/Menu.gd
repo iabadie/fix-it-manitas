@@ -4,6 +4,7 @@ var playing_animation: bool = false
 var listening_start: bool = false
 
 func _process(delta):
+	print()
 	if !listening_start && !playing_animation && Global.is_ready():
 		listening_start = true;
 		$Start.visible = true;
@@ -11,7 +12,7 @@ func _process(delta):
 
 	if listening_start && !playing_animation && (Input.is_action_just_pressed("Action_1") || Input.is_action_just_pressed("Action_2")):
 		playing_animation = true;
-		Animation.play("go_to_level");
+		$Animation.play("go_to_level");
 		
 	if Input.is_action_just_pressed("ui_x"):
 		get_tree().change_scene("res://scenes/Menu/Credits.tscn")
