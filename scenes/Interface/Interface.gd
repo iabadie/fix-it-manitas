@@ -1,18 +1,18 @@
 extends CanvasLayer
 
 var initialTime: int = 3
-var time = 45;
 var final = ""
 
 func _ready():
 	$InitialTime.start()
+	$Time.text = str(int($Timer.time_left))
 	pass
 
 func _process(delta):
 	$P1.text = "Player1: " + str(Global.p1_score)
 	$P2.text = "Player2: " + str(Global.p2_score)
-	$Time.text = str(time)
-		
+	$Time.text = str(int($Timer.time_left))
+
 
 func _on_InitialTime_timeout():
 	if initialTime > -1:
@@ -28,20 +28,14 @@ func _on_InitialTime_timeout():
 	initialTime -= 1
 	pass
 
-
 func _on_Timer_timeout():
-	time -= 1;
-	if time == 0:
-		get_tree().call_group("game", "finish")
-		if Global.p1_score > Global.p2_score:
-			final = "P1 WINS!";
-		if Global.p1_score < Global.p2_score:
-			final = "P2 WINS!";
-		else:
-			final = "DRAW!";
-		$Win.visible = true;
-		$Win.text = final;
-	if time > 0:
-		$Timer.start()
-	
+	get_tree().call_group("game", "finish")
+	if Global.p1_score > Global.p2_score:
+		final = "P1 WINS!";
+	if Global.p1_score < Global.p2_score:
+		final = "P2 WINS!";
+	else:
+		final = "DRAW!";
+	$Win.visible = true;
+	$Win.text = final;
 	pass

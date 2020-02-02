@@ -45,7 +45,7 @@ margin_top = 53.4289
 margin_right = 1033.6
 margin_bottom = 108.429
 custom_fonts/font = ExtResource( 1 )
-text = "00"
+text = "45"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -75,7 +75,10 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 45.0
+one_shot = true
 
 [node name="InitialTime" type="Timer" parent="."]
+one_shot = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="InitialTime" to="." method="_on_InitialTime_timeout"]

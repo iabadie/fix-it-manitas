@@ -7,5 +7,5 @@ func start():
 	get_tree().paused = false;
 	pass
 	
-func end():
+func finish():
 	get_tree().paused = true;
