@@ -19,37 +19,37 @@ centered = false
 [node name="WallCrashes" type="Node2D" parent="."]
 
 [node name="PlatCrash" type="Node2D" parent="WallCrashes"]
-position = Vector2( 418.824, -436.356 )
+position = Vector2( 817.449, -349.521 )
 
 [node name="CrashedWall" parent="WallCrashes/PlatCrash" instance=ExtResource( 1 )]
-position = Vector2( 930.847, 682.109 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 938.78, 653.549 )
+scale = Vector2( 0.66, 0.66 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash" instance=ExtResource( 3 )]
-position = Vector2( 913.059, 772.108 )
-scale = Vector2( 0.75, 0.75 )
+position = Vector2( 918.819, 740.201 )
+scale = Vector2( 0.51, 0.350001 )
 
 [node name="PlatCrash2" type="Node2D" parent="WallCrashes"]
 position = Vector2( 31.1683, -438.304 )
 
 [node name="CrashedWall" parent="WallCrashes/PlatCrash2" instance=ExtResource( 1 )]
-position = Vector2( 930.847, 682.109 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 59.7627, 740.816 )
+scale = Vector2( 0.66, 0.66 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash2" instance=ExtResource( 3 )]
-position = Vector2( 913.059, 772.108 )
-scale = Vector2( 0.75, 0.75 )
+position = Vector2( 35.628, 828.055 )
+scale = Vector2( 0.550001, 0.47 )
 
 [node name="PlatCrash3" type="Node2D" parent="WallCrashes"]
 position = Vector2( -477.265, -422.72 )
 
 [node name="CrashedWall2" parent="WallCrashes/PlatCrash3" instance=ExtResource( 1 )]
-position = Vector2( 1010.72, 691.849 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 1234.44, 688.676 )
+scale = Vector2( 0.58, 0.58 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash3" instance=ExtResource( 3 )]
-position = Vector2( 913.059, 772.108 )
-scale = Vector2( 0.75, 0.75 )
+position = Vector2( 1224.05, 766.935 )
+scale = Vector2( 0.389999, 0.350001 )
 
 [node name="PlatCrash4" type="Node2D" parent="WallCrashes"]
 position = Vector2( 416.876, -202.594 )
@@ -66,34 +66,34 @@ scale = Vector2( 0.75, 0.75 )
 position = Vector2( -5.84412, -210.386 )
 
 [node name="CrashedWall" parent="WallCrashes/PlatCrash5" instance=ExtResource( 1 )]
-position = Vector2( 930.847, 682.109 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 1118.07, 474.255 )
+scale = Vector2( 0.619998, 0.619998 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash5" instance=ExtResource( 3 )]
-position = Vector2( 913.059, 772.108 )
-scale = Vector2( 0.75, 0.75 )
+position = Vector2( 1107.63, 555.667 )
+scale = Vector2( 0.39, 0.39 )
 
 [node name="PlatCrash6" type="Node2D" parent="WallCrashes"]
 position = Vector2( -481.161, -214.282 )
 
 [node name="CrashedWall" parent="WallCrashes/PlatCrash6" instance=ExtResource( 1 )]
-position = Vector2( 930.847, 682.109 )
+position = Vector2( 1352.9, 734.469 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash6" instance=ExtResource( 3 )]
-position = Vector2( 913.059, 772.108 )
-scale = Vector2( 0.75, 0.75 )
+position = Vector2( 1328.77, 804.602 )
+scale = Vector2( 0.469998, 0.469998 )
 
 [node name="PlatCrash8" type="Node2D" parent="WallCrashes"]
 position = Vector2( -1.35442, -26.9218 )
 
 [node name="CrashedWall2" parent="WallCrashes/PlatCrash8" instance=ExtResource( 1 )]
-position = Vector2( 1010.72, 691.849 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 1005.96, 536.355 )
+scale = Vector2( 0.62, 0.62 )
 
 [node name="Platform" parent="WallCrashes/PlatCrash8" instance=ExtResource( 3 )]
-position = Vector2( 913.059, 772.108 )
-scale = Vector2( 0.75, 0.75 )
+position = Vector2( 991.393, 617.201 )
+scale = Vector2( 0.430002, 0.430002 )
 
 [node name="PlatCrash9" type="Node2D" parent="WallCrashes"]
 position = Vector2( -473.369, 7.79211 )
