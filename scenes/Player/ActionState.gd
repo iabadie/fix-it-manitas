@@ -1,16 +1,15 @@
 extends Node
+class_name ActionState
 
+func play_animation():
+	if Input.is_action_just_pressed("Action_1"):
+		$"../../Animation".play("Action");
+	
+	if Input.is_action_just_released("Action_1"):
+		$"../../Animation".stop;
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	if Input.is_action_just_pressed("Action_2"):
+			$"../../Animation".play("Action");
+		
+	if Input.is_action_just_released("Action_2"):
+			$"../../Animation".stop;

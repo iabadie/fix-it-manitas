@@ -2,18 +2,18 @@
 
 [ext_resource path="res://Assets/IDLE/player1/Idlenacho01.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Player/Player.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Climb/Climb2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Hammer/player1/fixit01.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Push/Push2.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Climb/Climb3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Hammer/player1/fixit03.png" type="Texture" id=5]
 [ext_resource path="res://Assets/IDLE/player1/Idlenacho02.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Push/Push1.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Hammer/Hammer2.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Walk/Walk3.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Hammer/player1/fixit02.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Climb/player1/climb02.png" type="Texture" id=9]
 [ext_resource path="res://Assets/IDLE/player1/Idlenacho03.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Hammer/Hammer1.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Climb/Climb1.png" type="Texture" id=12]
-[ext_resource path="res://Assets/Walk/Walk1.png" type="Texture" id=13]
-[ext_resource path="res://Assets/Walk/Walk2.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Walk/player1/nachowalk02.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Walk/player1/nachowalk01.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Climb/player1/climb04.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Climb/player1/climb03.png" type="Texture" id=14]
 [ext_resource path="res://scenes/Player/ClimbState.gd" type="Script" id=15]
 [ext_resource path="res://scenes/Player/PlatformState.gd" type="Script" id=16]
 
@@ -24,17 +24,17 @@ animations = [ {
 "name": "IDLE",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Climb",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Hammer",
 "speed": 5.0

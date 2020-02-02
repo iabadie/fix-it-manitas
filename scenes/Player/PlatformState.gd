@@ -16,10 +16,10 @@ func platform_movement(is_on_floor: bool, player_number: String):
 			velocity.y += GRAVITY_FORCE;
 		if Input.is_action_pressed("ui_right_1"):
 			velocity.x = MOVE_VELOCITY;
-			$"../../Animation".flip_h = false;
+			$"../../Animation".flip_h = true;
 		if Input.is_action_pressed("ui_left_1"):
 			velocity.x = -MOVE_VELOCITY;
-			$"../../Animation".flip_h = true;
+			$"../../Animation".flip_h = false;
 		if Input.is_action_just_released("ui_left_1") || Input.is_action_just_released("ui_right_1"):
 			velocity.x = NO_VELOCITY;
 		if Input.is_action_pressed("ui_up_1"):
@@ -33,10 +33,10 @@ func platform_movement(is_on_floor: bool, player_number: String):
 			velocity.y += GRAVITY_FORCE;
 		if Input.is_action_pressed("ui_right_2"):
 			velocity.x = MOVE_VELOCITY;
-			$"../../Animation".flip_h = false;
+			$"../../Animation".flip_h = true;
 		if Input.is_action_pressed("ui_left_2"):
 			velocity.x = -MOVE_VELOCITY;
-			$"../../Animation".flip_h = true;
+			$"../../Animation".flip_h = false;
 		if Input.is_action_just_released("ui_left_2") || Input.is_action_just_released("ui_right_2"):
 			velocity.x = NO_VELOCITY;
 		if Input.is_action_pressed("ui_up_2"):

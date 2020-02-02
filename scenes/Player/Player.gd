@@ -10,9 +10,18 @@ func _process(delta):
 	if player_number == "player1":
 		if can_repair && areaprueba != null && Input.is_action_just_pressed("Action_1"):
 			areaprueba.get_parent().fix_wall();
+			change_state(STATES.ACTION);
 	elif player_number == "player2":
 		if can_repair && areaprueba != null && Input.is_action_just_pressed("Action_2"):
 			areaprueba.get_parent().crash_wall();
+			change_state(STATES.ACTION);
+	
+	if player_number == "player1":
+		if state != STATES.CLIMB && Input.is_action_just_pressed("ui_up_1"):
+			change_state(STATES.CLIMB);
+	elif player_number == "player2":
+		if state != STATES.CLIMB && Input.is_action_just_pressed("ui_up_2"):
+			change_state(STATES.CLIMB);
 	
 # Player signals conection
 func _on_Area_area_entered(area):
