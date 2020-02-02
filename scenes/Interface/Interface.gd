@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 var initialTime: int = 3
-var time = 45;
+var time = 30;
 var final = ""
 
 func _ready():
