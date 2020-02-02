@@ -12,7 +12,7 @@ func _ready():
 	pass
 	
 func _process(delta):
-	if can_select && Input.is_action_just_pressed("Action"):
+	if can_select && Input.is_action_just_pressed("Action_"+str(player_number)):
 		selection_ready();
 
 func selection_ready():
