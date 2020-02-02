@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/Platform/Platform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Limits/Limits.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Fondo.png" type="Texture" id=5]
-[ext_resource path="res://scenes/Player2/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Player/Player2.tscn" type="PackedScene" id=6]
 
 [node name="Level" type="Node2D"]
 __meta__ = {
